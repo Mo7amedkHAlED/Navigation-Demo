@@ -40,7 +40,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Navigation"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="homeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fir-bX-ZV8"/>
                                 </connections>
@@ -106,7 +106,7 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="sendTOThreebu:" destination="Wr1-Ea-J73" eventType="touchUpInside" id="bpQ-zE-pEK"/>
                                     <action selector="sendTOThreebu:" destination="2MM-Fg-IdX" eventType="touchUpInside" id="qYt-Rc-lbe"/>
@@ -115,7 +115,7 @@
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63f-Dt-vik">
                                 <rect key="frame" x="8" y="61" width="398" height="220"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image11" translatesAutoresizingMaskIntoConstraints="NO" id="Yks-MJ-Pya">
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image11" translatesAutoresizingMaskIntoConstraints="NO" id="Yks-MJ-Pya">
                                         <rect key="frame" x="8" y="8" width="382" height="204"/>
                                     </imageView>
                                 </subviews>
@@ -131,7 +131,7 @@
                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8L7-47-Nej">
                                 <rect key="frame" x="8" y="313" width="398" height="242"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image12" translatesAutoresizingMaskIntoConstraints="NO" id="KY2-GE-aWp">
+                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image12" translatesAutoresizingMaskIntoConstraints="NO" id="KY2-GE-aWp">
                                         <rect key="frame" x="8" y="8" width="382" height="226"/>
                                     </imageView>
                                 </subviews>
@@ -195,7 +195,7 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back TO Root"/>
                                 <connections>
                                     <action selector="sendToFristButt:" destination="VCg-L0-cGM" eventType="touchUpInside" id="ayj-Fx-pDd"/>
                                 </connections>
@@ -224,7 +224,6 @@
         <!--Navigation Controller-->
         <scene sceneID="5Am-wK-ucZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PB4-ys-NuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zSK-u5-UM1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HTc-cN-ar3">
@@ -236,6 +235,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Qc-YO-HhX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PB4-ys-NuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="44.927536231884062" y="83.705357142857139"/>
         </scene>

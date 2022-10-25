@@ -6,53 +6,37 @@
 //
 
 import UIKit
-//protocol Delegate : AnyObject {
-//    func didTappedonButton(title:String)
-//}
+
 class ViewController3: UIViewController {
     @IBOutlet weak var myQuote: UILabel!
     var text = " "
-//    var delegate : Delegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         myQuote.text = text
-        // Do any additional setup after loading the view.
     }
     
-
+    
     @IBAction func sendToFristButt(_ sender: UIButton) {
-        let userInfo = ["text" : myQuote.text]
-        NotificationCenter.default.post(name: NSNotification.Name("labeltext"), object: nil,userInfo: userInfo)
-//        let title = myQuote.text ?? ""
-//        delegate?.didTappedonButton(title: title)
-        filterAlert ()
+        configureConfirmationAlert ()
     }
-    func filterAlert () {
-        let alertController = UIAlertController(title: "Confirm", message: "are you sure to use filter", preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                UIAlertAction in
-            let storyboaed = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboaed.instantiateViewController(withIdentifier: "ViewController1") as! ViewController1
-            vc.homeText = self.myQuote.text ?? " "
+    
+    func configureConfirmationAlert () {
+        let alertController = UIAlertController(title: "Confirm", message: "Are you sure U want to navigate back?", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) {
+            _ in
+            let userInfo = ["text" : self.myQuote.text]
+            NotificationCenter.default.post(name: NSNotification.Name("labeltext"), object: nil, userInfo: userInfo as [AnyHashable : Any])
             self.navigationController?.popToRootViewController(animated: true)
-            
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) {
-                UIAlertAction in
-            self.dismiss(animated: true)
-            }
-
-            // Add the actions
-            alertController.addAction(okAction)
-            alertController.addAction(cancelAction)
-
-            // Present the controller
-        self.present(alertController, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        present(alertController, animated: true, completion: nil)
     }
-
+    
 }
-//extension ViewController3 : Delegate{
-//    func didTappedonButton(title: String) {
-//      
-//    }
-//}
